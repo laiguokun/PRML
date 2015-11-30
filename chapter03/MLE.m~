@@ -1,0 +1,3 @@
+function [W, b] = MLE(X, Y, n, d)
+    x = [ones(1,n);X];
+    
