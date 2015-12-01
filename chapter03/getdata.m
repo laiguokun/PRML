@@ -7,4 +7,4 @@ Phi = [ones(1,n)];
 for i = 1:d
     Phi = [Phi; (X.^i)'];
 end
-Y = (W' * Phi)' + normrnd(0, 1.0/beta, [n,1]);
+Y = (W' * Phi)' + normrnd(0, sqrt(1.0/beta), [n,1]);
