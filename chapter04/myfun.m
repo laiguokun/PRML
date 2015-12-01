@@ -1,0 +1,3 @@
+function z = myfun(x,y,S11,S12,S13,S21,S22,S23,S31,S32,S33,W1,W2,W3)
+    z = W1/((pi*S11)/8 + (x*(pi*S12 + pi*S22*x + pi*S32*y))/8 + (y*(pi*S13 + pi*S23*x + pi*S33*y))/8 + (pi*S21*x)/8 + (pi*S31*y)/8 + 1)^(1/2) + (W2*x)/((pi*S11)/8 + (x*(pi*S12 + pi*S22*x + pi*S32*y))/8 + (y*(pi*S13 + pi*S23*x + pi*S33*y))/8 + (pi*S21*x)/8 + (pi*S31*y)/8 + 1)^(1/2) + (W3*y)/((pi*S11)/8 + (x*(pi*S12 + pi*S22*x + pi*S32*y))/8 + (y*(pi*S13 + pi*S23*x + pi*S33*y))/8 + (pi*S21*x)/8 + (pi*S31*y)/8 + 1)^(1/2)
+end
