@@ -1,4 +1,5 @@
-function [W, Sn] = PDM(X, Y, n, d)
+function [W, Sn] = BLR(X, Y, n, d)
+%Bayesian Logistic Regression
     X = [ones(1,n);X];
     Phi = X';
     W = zeros(d+1,1);
@@ -12,4 +13,5 @@ function [W, Sn] = PDM(X, Y, n, d)
     y = sigmf(W' * X,[1,0])';
     R = diag(y.*(1-y));
     Sn = alpha^-1*eye(d+1) + Phi' * R * Phi;
+    
     
